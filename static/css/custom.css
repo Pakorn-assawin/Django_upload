@@ -1,4 +1,4 @@
-header {
+/* header {
     font-family: 'Kanit', sans-serif;
     background: url("{% static 'image/hero-bg.png' %}")no-repeat center center;    background-size: contain;
     background-color: black;
@@ -8,7 +8,7 @@ header {
     
    
    
-}
+} */
 
 
 
