@@ -1,0 +1,172 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+    <title>AIDEA</title>
+    
+    <link rel="shortcut icon" href="{% static 'image/LGAiDea.png' %}">
+    <link rel="stylesheet" href=" {% static 'css/custom.css' %}"> 
+    <link rel="stylesheet" href=" {% static 'css/font2.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;300;500;600;700&display=swap" rel="stylesheet">
+  
+</head>
+<style> 
+  header {
+      font-family: 'Kanit', sans-serif;
+      background: url("{% static 'image/hero-bg.png' %}")no-repeat center center;
+      background-size: contain;
+      background-color: black;
+      margin-top: 10%;
+      height: 500px;
+
+  }
+  
+  .btn-1{
+  padding: 10px;
+  display: inline-block;
+  background: url("{% static 'image/BGbtn.png' %}");
+
+  background-size: cover;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 0%;
+  cursor: pointer;
+  border-radius: 12px;
+  border: none;
+  color: white;
+  position: absolute;
+  margin-left: 25%;
+  width: 45%;
+  
+}
+
+  
+  
+</style> 
+
+<body>
+  {% csrf_token %}
+  <nav class="navbar navbar-expand-lg navbar-light ">
+       
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">
+            <img src="{% static 'image/LGAiDea.png' %}" alt="" width=40px; class="d-inline-block align-text-top">
+
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+        <div class="collapse navbar-collapse" id="navbarToggler">
+            <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a href="/home" class="nav-link active" aria-current="page">หน้าหลัก</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/upload" class="nav-link">อัพโหลดรูปภาพ</a>
+                </li>
+                <li class="nav-item">
+                    <a href="/objective" class="nav-link">วัตถุประสงค์และเงื่อนไขกิจกรรม</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <!-- Header -->
+
+
+    <text class="bg-light"  >
+    <div class="container ">
+      <div class="row">
+        <div class="col-xl-9 mx-auto">
+        <h3  id="Hed" class="text-center" style="letter-spacing: 1px;">วัตถุประสงค์และเงื่อนไขกิจกรรม</h3>
+        </div>
+        
+        <div class="col-xl-9 mx-auto">
+            <h4 id="b" class="text-left">AiDEA คือใคร</h4>
+         <div class="col-xl-9 mx-auto">
+            <h5  class="font-weight-light" style="letter-spacing:1px;">พวกเราคือทีมนักพัฒนาจากโครงการ PEA Innovation Hub รุ่นที่ 3 (GEMs#3)<br> เรามีแนวคิดที่จะสร้างเครื่องมือและระบบตรวจสอบวิเคราะห์ระบบ ไฟฟ้าจากภาพถ่าย โดยนำเทคโนโลยี AI เข้ามาช่วย ในการปฏิบัติงานของพนักงานที่เกี่ยวข้องกับงานด้านการบำรุงรักษาระบบไฟฟ้า</h5>
+          </div>
+        </div>
+       
+        <div class="col-xl-9 mx-auto">
+            <h4 id="b" class="text-left">สิ่งที่เรากำลังทำอยู่</h4>
+        <div class="col-xl-9 mx-auto" style="letter-spacing:1px;">
+            <h5 class="font-weight-light">ตอนนี้เราต้องการรูปภาพอุปกรณ์ระบบไฟฟ้าจำนวนมาก เพื่อนำไปพัฒนาระบบ AI ที่จะมาช่วยในการตรวจสอบระบบไฟฟ้าของ PEA พวกเราจึงได้จัดทำโครงการ “ถ่ายรูปดีมีรางวัล” ขึ้นมา เพื่อเปิดรับภาพถ่ายมุมสูงของอุปกรณ์ในระบบไฟฟ้าของ PEA
+              รูปภาพทั้งหมดที่เราได้รับนั้น จะถูกนำไปใช้ในการทำ Machine Learning สำหรับใช้ในงานตรวจสอบ
+              และบำรุงรักษาระบบไฟฟ้าของ PEA พวกเราตั้งใจที่จะลดข้อผิดพลาดจากการตรวจสอบด้วยตาเปล่า และเพิ่มประสิทธิภาพ การวิเคราะห์ และการวางแผน งานที่สุดแสนจะปวดหัวให้กลายเป็นเรื่องง่าย รวดเร็ว และถูกต้องแม่นยำยิ่งขึ้น</h5>
+            </div>
+          </div>
+         
+          <br>
+          <br>
+          <div class="col-xl-9 mx-auto" >
+            <h4 id="b" class="text-left" >สิ่งที่คุณจะช่วยเราได้</h4>
+             <div class="col-xl-9 mx-auto" >
+              <h5 class="font-weight-light" >เพียงคุณส่งภาพถ่ายมุมสูงของอุปกรณ์ในระบบไฟฟ้า เข้ามาให้เรา เราจะนำภาพถ่ายเหล่านั้นไปสร้างเป็น ฐานข้อมูล และฝึกการเรียนรู้อุปกรณ์ในระบบไฟฟ้า ให้มีความแม่นยำมากยิ่งขึ้น โดยพวกเราเชื่อว่า ความร่วมมือจากทุกท่านจะช่วยให้เราพัฒนาเครื่องมือนี้ได้สำเร็จ และสามารถนำไปใช้เพื่อสร้างคุณค่า สร้างประโยชน์ และสร้างรายได้ให้กับพวกเราชาว PEA ได้อย่างแน่นอน</h5>
+              </div>
+            </div>
+            
+            <div class="col-xl-9 mx-auto">
+              <h4 id="b" class="text-left">สิ่งที่คุณจะได้รับ</h4>
+               <div class="col-xl-9 mx-auto">
+                <h5 class="font-weight-light" style="letter-spacing:1px;">ผู้เข้าร่วมกิจกรรมทุกท่านจะได้ลุ้นรับรางวัล มูลค่ารวมกว่า  3,000 บาท โดยมีเงื่อนไขในการ พิจารณารางวัล คือ 1 รูป เท่ากับ 1 คะแนน ซึ่งผู้ที่ได้รับคะแนนสูงสุด 8 อันดับแรก รับไปเลย บัตรแทนเงินสด Tesco Lotus</h5>
+                 
+                    <h5><ul>
+                      <li id="c" class="font-weight-light" style="letter-spacing:1px;">มูลค่า 500 บาท จำนวน 3 รางวัล</li>
+                      <li id="c" class="font-weight-light" style="letter-spacing:1px;">มูลค่า 300 บาท จำนวน 5 รางวัล </li>
+                     </ul>
+                     </h5>
+                
+                 <h5 class="font-weight-light" >ยิ่งส่งมาก ยิ่งมีสิทธิ์ได้รับรางวัลมาก !</h5>
+                </div>
+
+              </div>
+
+              <div class="col-xl-9 mx-auto">
+                <h4 id="b" class="text-left">ระยะเวลากิจกรรม</h4>
+                 <div class="col-xl-9 mx-auto">
+                  <h5 class="font-weight-light" style="letter-spacing:1px;">เริ่มตั้งแต่วันนี้ จนถึงวันที่ 31 สิงหาคม 2564 </h5>
+                  </div>
+                </div>
+
+                <div class="col-xl-9 mx-auto">
+                  <h4 id="b" class="text-left">ประกาศผลกิจกรรม</h4>
+                   <div class="col-xl-9 mx-auto">
+                    <h5 class="font-weight-light" style="letter-spacing:1px;">ภายในวันที่ 1 กันยายน 2564</h5>
+                    </div>
+                  </div>
+
+                  
+
+               <div class="container " id="A" style="margin-bottom:5%;">
+
+                <a href="/home"> <button type="submit" class="btn-1 col-md-10 col-lg-8 col-xl-7 col-xl-9 mx-auto text-center " style="left: 25%; margin-top: 5%; margin-bottom: 5%;">ย้อนกลับ</button> </a>
+    
+            </div>
+              
+      </div>
+    </text>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+
+</body>
+
+</html>

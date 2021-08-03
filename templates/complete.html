@@ -1,0 +1,131 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/complete.css' %}">
+    <title>AIDEA</title>
+    <link rel="shortcut icon" href="{% static 'image/LGAiDea.png' %}">
+    <link rel="stylesheet" href=" {% static 'css/font.css' %}">
+    <link rel="stylesheet" href=" {% static 'css/font2.css' %}">
+    <link rel="stylesheet" href=" {% static 'css/custom.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;300;500;600;700&display=swap" rel="stylesheet">
+
+
+</head>
+<style>
+    .btn-4 {
+        padding: 10px;
+        display: inline-block;
+        background: url("{% static 'image/BGbtn.png' %}");
+        background-size: cover;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin-top: 0%;
+        cursor: pointer;
+        border-radius: 12px;
+        border: none;
+        color: white;
+        position: absolute;
+        margin-left: 25%;
+    }
+    
+    #container-fluid-text {
+        padding: 10px;
+        display: inline-block;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin-top: 0%;
+        cursor: pointer;
+        border-radius: 12px;
+        border: none;
+        color: white;
+        position: absolute;
+    }
+</style>
+
+<body>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <!-- Navbar  -->
+    <nav class="navbar navbar-expand-lg navbar-light ">
+        <div class="container">
+            <!-- Brand/logo -->
+            <a class="navbar-brand" href="#">
+                <img src="{% static 'image/LGAiDea.png' %}" alt="logo" style="width:40px;">
+            </a>
+            <!-- <a href="#" class="navbar-brand">Aidea</a> -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+            <div class="collapse navbar-collapse" id="navbarToggler">
+                <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a href="/home" class="nav-link active" aria-current="page">หน้าหลัก</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/upload" class="nav-link">อัพโหลดรูปภาพ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/objective" class="nav-link">วัตถุประสงค์และเงื่อนไขกิจกรรม</a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+
+    <submit class="bg-light">
+        <div class="container ">
+            <div class="row">
+
+                <div class="col-xl-9 mx-auto ">
+
+
+                    <img src="{% static 'image/finish.jpg' %}" class="rounded mx-auto d-block" style="margin-top: 10%;" alt="...">
+                </div>
+
+
+    </submit>
+
+    <div class="container-fluid">
+
+        <div class="col-md-10 col-lg-8 col-xl-7 " style="margin-top:5%; margin-bottom: 10%;">
+
+            <a href="/upload"> <button type="submit" class="btn-4 col-md-10 col-lg-8 col-xl-7 col-xl-9 mx-auto  " style="left: 25%; margin-top: 5%;">อัพโหลดรูปภาพเพิ่มเติม</button> </a>
+
+        </div>
+    </div>
+
+    <div class="container-fluid-text" style="margin-top: 25% ;">
+        <div class="col-md-10 col-lg-8 col-xl-7 ">
+            <a href="/home" class="card-link">
+                <h5 class="text-center" style="color: gray;">กลับสู่หน้าหลัก</h5>
+            </a>
+        </div>
+    </div>
+
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+
+</body>
+
+</html>
