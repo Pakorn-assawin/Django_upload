@@ -19,7 +19,7 @@
     <link rel="shortcut icon" href="{% static 'image/LGAiDea.png' %}">
     <link rel="stylesheet" href=" {% static 'css/font.css' %}">
     <link rel="stylesheet" href=" {% static 'css/font2.css' %}">
-    <link rel="stylesheet" href=" {% static 'css/custom.css' %}">
+    <!-- <link rel="stylesheet" href=" {% static 'css/custom.css' %}"> -->
    
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;300;500;600;700&display=swap" rel="stylesheet">
@@ -33,6 +33,33 @@
      margin-left: auto;
      margin-right: auto;
 }
+
+#btn_submit_B{
+    width: 120px;
+    text-align: center;
+}
+#btn_submit_S{
+    width: 120px;
+    text-align: center;
+}
+#subject{
+        width: 200px;
+    text-align: center;
+    }
+    #topic{
+        width: 220px;
+        text-align: center;
+    }
+    
+    #chapter{
+            width: 200px;
+    text-align: center;
+
+         }
+         #partname{
+            width: 300px;             
+         }
+
          
     </style> 
 <body>
@@ -49,16 +76,18 @@
           </button>
 
             <div class="collapse navbar-collapse" id="navbarToggler">
-                <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
+                <ul class="navbar-nav  ">
+                    <div class="dropdown-menu">
+                    <!-- <li class="nav-item"> -->
                         <a href="/home" class="nav-link active" aria-current="page">หน้าหลัก</a>
-                    </li>
-                    <li class="nav-item">
+                    <!-- </li> -->
+                    <!-- <li class="nav-item"> -->
                         <a href="/upload" class="nav-link">อัพโหลดรูปภาพ</a>
-                    </li>
-                    <li class="nav-item">
+                    <!-- </li> -->
+                    <!-- <li class="nav-item"> -->
                         <a href="/objective" class="nav-link ">วัตถุประสงค์และเงื่อนไขกิจกรรม</a>
-                    </li>
+                    <!-- </li> -->
+                    </div>
 
 
                 </ul>
@@ -168,7 +197,7 @@
                         }
                     </style>
                     <h4>อุปกรณ์ที่ 1</h4>
-                    <form name="myform" method="POST" enctype="multipart/form-data">
+                    <form name="myform" method="POST" id="myformy" enctype="multipart/form-data">
 
                         <!-- <div class="radio_box"></div> -->
 
