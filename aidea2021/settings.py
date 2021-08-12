@@ -12,7 +12,9 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 from pathlib import Path
 import os
+import dj_database_url
 import django_heroku
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -28,7 +30,7 @@ DEBUG = False
 ALLOWED_HOSTS = ['https://aidea01.herokuapp.com']
 
 
-# Application definition;s
+# Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -108,6 +110,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+DATABASES['default']=dj_database_url.config(defuly= 'https://git.heroku.com/aidea01.git')
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
