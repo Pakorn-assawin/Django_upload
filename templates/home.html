@@ -10,7 +10,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
-
+    <link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
     <title>AIDEA</title>
     <link rel="shortcut icon" href="{% static 'image/LGAiDea.png' %}">
     <link rel="stylesheet" href=" {% static 'css/custom.css' %}">
@@ -18,29 +18,74 @@
     <link rel="stylesheet" href=" {% static 'css/font.css' %}">
     <link rel="stylesheet" href=" {% static 'css/font2.css' %}">
     <link rel="stylesheet" href=" {% static 'css/home.css' %}">
-   
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;300;500;600;700&display=swap" rel="stylesheet">
-    
-
-
-
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="stylesheet.css" type="text/css" charset="utf-8" />
+  
 </head>
 <style>
+
+   @font-face {
+    font-family: 'NotoSansThai';
+    src: url("{% static 'CSS/NotoSansThai-ExtraCondensedBold.ttf' %}");
+   
+  } 
+
+  /* 
+  @font-face {
+    font-family: 'NotoSansE';
+    src: url("{% static 'CSS/NotoSans-Regular.ttf' %}");
+    font-weight: 200; 
+    font-style: normal;
+  } */
+
+
+  @font-face {
+    font-family: 'NotoSansThai0';
+    src: url("{% static 'CSS/NotoSansThai-CondensedThin.ttf' %}");
+    
+  }
+  
+
+  h3,p{
+    font-family: 'NotoSansThai0';
+    font-size: 16px;
+    word-spacing: 3px;
+    font-weight: 650;
+    
+    /* font-size: 14px; */
+  }
+  h3{
+    font-family: 'NotoSansThai';
+    font-size: 16px;
+    word-spacing: 3px;
+    font-weight: 650;
+    /* font-size: 14px; */
+  }
+
+  a{
+    font-family: 'NotoSansThai0';
+    font-size: 16px;
+    word-spacing: 3px;
+    font-weight: 750;
+    
+    /* font-size: 14px; */
+  }
+  
+  
+   /* การปรับเปลี่ยน ฟ้อนใหเ ตรงตาม แบบ เหลือ ขนาด และความหนา */
     #B{
         color: #CCF4ED;
     
 }
-    
-    header {
-        font-family: 'Kanit', sans-serif;
-        background: url("{% static 'image/hero-bg.png' %}")no-repeat center center;
+
+header {
+        
+        background: url("{% static 'image/poster.jpg' %}")no-repeat center center;
         background-size: contain;
         /* background-color: black; */
         margin-top: 0%;
         height: 500px;
-    }
+ }
     
     footer {
     padding-top: 0rem;
@@ -71,51 +116,104 @@
         margin-left: 25%;
         width: 45%;
     }
+        
+/*    /* Add a black background color to the top navigation */
+.topnav {
+    background-color: #CCF4ED;
+    overflow: hidden;
+  }
+  #P,#B{
+    color: white;
+    letter-spacing: 1px;
+  }
+  #B{
+    color: #CCF4ED;
+    letter-spacing: 1px;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    display: block;
+    color: #726F69;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #CCF4ED;
+    color: black;
+  }
+  
+  /* Add an active class to highlight the current page */
+  .topnav a.active {
+    background-color: #CCF4ED;
+    color: black;
+  }
+  
+  /* Hide the link that should open and close the topnav on small screens */
+  .topnav .icon {
+    display: none;
+  }
+     /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+  @media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
 </style>
 
 <body>
-    {% csrf_token %}
-    <nav class="navbar navbar-expand-lg navbar-light ">
-
-        <div class="container-fluid">
-            <a class="navbar-brand" href="">
-                <img src="{% static 'image/LGAiDea.png' %}" alt="" width=40px; class="d-inline-block align-text-top">
-
+     {% csrf_token %} 
+    
+          <nav class="topnav" id="myTopnav">
+            <a class="navbar-brand" href="/home">
+                <img src="{% static 'image/LGAiDea.png' %}" alt="" width=30px; style="margin-bottom: 5px ;" >
+    
+            </a> 
+            <a href="/home" >หน้าหลัก</a>
+            <a href="/upload">อัพโหลดรูปภาพ</a>
+            <a href="/objective">วัตถุประสงค์และเงื่อนไขกิจกรรม</a>
+           
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
             </a>
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-
-            <div class="collapse navbar-collapse" id="navbarToggler">
-                <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a href="/home" class="nav-link active" aria-current="page">หน้าหลัก</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/upload" class="nav-link">อัพโหลดรูปภาพ</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="/objective" class="nav-link">วัตถุประสงค์และเงื่อนไขกิจกรรม</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+          </nav>
+          
 
     <header class="text-white text-center container  col-md-10 col-lg-8 col-xl-7 col-xl-9 mx-auto">
 
     </header>
 
-
+   
     <!-- Footer -->
     <footer class="container  col-md-10 col-lg-8 col-xl-7 col-xl-9 mx-auto ">
 
 
         <h3>
             <ul>
-                <li id="B">ภาพถ่ายที่ส่งมาจะต้องเป็น ภาพถ่ายมุมสูงที่มองเห็นอุปกรณ์ และร่องรอยการชำรุดได้ชัดเจน ไม่มีสัญลักษณ์ต่างๆ บนภาพ ดูตัวอย่างรูปภาพ</li><br>
-                <li id="B">สอบถามเพิ่มเติมผ่านช่องทาง <a href="#" id="B" class="visited-link">Line Openchat</a></li>
+                <li id="B"><a id="P" >ภาพถ่ายที่ส่งมาจะต้องเป็น</a> ภาพถ่ายมุมสูงที่มองเห็นอุปกรณ์ และร่องรอยการชำรุดได้ชัดเจน ไม่มีสัญลักษณ์ต่างๆ บนภาพ <a href="/example" id="B" class="visited-link">ดูตัวอย่างรูปภาพ</a></li><br>
+                <li id="B"><a id="P" >สอบถามเพิ่มเติมผ่านช่องทาง <a href="https://line.me/ti/g2/wFtHkLQ3HbfSft7M4YiKlw?utm_source=invitation&utm_medium=link_copy&utm_campaign=default" id="B" class="visited-link">Line Openchat</a></a></li> 
                 <br>
                 <li id="B"><a href="/objective" id="B" class="visited-link">วัตถุประสงค์และเงื่อนไขกิจกรรม</a></li>
             </ul>
@@ -131,16 +229,25 @@
 
     </footer>
 
-
-
+    <script>
+     
+      /* nav between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+      function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+          x.className += " responsive";
+        } else {
+          x.className = "topnav";
+        }
+      }
+    </script>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    
-</body>
+    <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script> 
+  </body>
 
 </html>
-<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>

@@ -19,6 +19,8 @@ from uploadimage.views import home
 from uploadimage.views import upload
 from uploadimage.views import complete
 from uploadimage.views import objective
+from uploadimage.views import example
+# from uploadimage.views import showimage
 
 
 from django.conf import settings
@@ -30,7 +32,8 @@ urlpatterns = [
     path('upload', upload),
     path('complete', complete),
     path('objective', objective),
-
+    path('example',example),
+   
 
    
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
