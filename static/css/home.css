@@ -47,13 +47,13 @@ header {
 } */
 
 footer {
-    padding-top: 0rem;
+    padding-top: 2rem;
     padding-bottom: 2rem;
     background: url('../img/black.jpg') no-repeat center center;
     background-size: cover;
-    padding-top: 0rem;
+    padding-top: 1rem;
     padding-bottom: 4rem;
-    height: 90px;
+    height: 100px;
 }
 
 @media screen and (max-width: 300px) {
