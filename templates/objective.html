@@ -37,6 +37,10 @@
     src: url("{% static 'CSS/NotoSansThai-ExtraCondensedBold.ttf' %}");
    
   } 
+  #myTopnav{
+            letter-spacing: 2px;
+
+          }
 
   h4,h3,h5{
     font-family: 'NotoSansThai';
@@ -54,7 +58,7 @@
   }
  
   header {
-      font-family: 'Kanit', sans-serif;
+      
       background: url("{% static 'image/hero-bg.png' %}")no-repeat center center;
       background-size: contain;
       background-color: black;
@@ -62,6 +66,11 @@
       height: 500px;
 
   }
+
+  #A{
+     margin-top: 5%;
+    margin-bottom:5%;
+ }
   
   .btn-1{
   padding: 10px;
@@ -70,17 +79,20 @@
 
   background-size: cover;
   text-align: center;
+  font-weight:bold;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
+  font-weight: bold;
+   letter-spacing: 2px;
   margin-top: 0%;
   cursor: pointer;
   border-radius: 12px;
   border: none;
   color: white;
   position: absolute;
-  margin-left: 25%;
-  width: 45%;
+ 
+  width: 35%;
   
 }
 
@@ -213,26 +225,26 @@
               <div class="col-xl-9 mx-auto">
                 <h4 id="b" class="text-left">ระยะเวลากิจกรรม</h4>
                  <div class="col-xl-9 mx-auto">
-                  <h5 class="font-weight-light" style="letter-spacing:1px;">เริ่มตั้งแต่วันนี้ จนถึงวันที่ 31 สิงหาคม 2564 </h5>
+                  <h5 class="font-weight-light" style="letter-spacing:1px;">เริ่มตั้งแต่วันนี้ จนถึงวันที่ 15 กันยายน 2564 </h5>
                   </div>
                 </div>
 
                 <div class="col-xl-9 mx-auto">
                   <h4 id="b" class="text-left">ประกาศผลกิจกรรม</h4>
                    <div class="col-xl-9 mx-auto">
-                    <h5 class="font-weight-light" style="letter-spacing:1px;">ภายในวันที่ 1 กันยายน 2564</h5>
+                    <h5 class="font-weight-light" style="letter-spacing:1px;">ภายในวันที่ 16 กันยายน 2564</h5>
                     </div>
                   </div>
 
                   
 
-               <div class="container-fluid " id="A" style="margin-bottom:5%;">
+               <div class="container-fluid " id="A" ;>
                 <div class="row">
                   <div class="container">
-                <a href="/upload"> <button type="submit" class="btn-1 col-md-10 col-lg-8 col-xl-7 col-xl-9 mx-auto text-center " style="right: 0%; ">อัพโหลดรูปภาพ</button> </a>
+                <a href="/upload"> <button type="submit"   class="btn-1 col-sm-6 col-md-10 col-lg-8 col-xl-7 col-xl-9 mx-auto text-center " style="right: 10%; ">อัพโหลดรูปภาพ</button> </a>
                   </div>
                   <div class="container">
-                    <a href="/home"> <button type="submit" class="btn-1 col-md-10 col-lg-8 col-xl-7 col-xl-9 mx-auto text-center "style="left: 0%;">ย้อนกลับ</button> </a>
+                    <a href="/home"> <button type="submit"  class="btn-1  col-sm-6 col-md-10 col-lg-8 col-xl-7 col-xl-9 mx-auto text-center "style="left: 10%;">ย้อนกลับ</button> </a>
                      </div>
             </div>
               

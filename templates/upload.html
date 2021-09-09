@@ -30,6 +30,10 @@
   display: none;
    
 }
+#myTopnav{
+            letter-spacing: 2px;
+
+          }
     
 
     @font-face {
@@ -72,24 +76,64 @@
    }
 
    #btn_submit_B{
-       width: 120px;
-       text-align: center;
+    padding: 10px;
+  display: inline-block;
+  background: url("{% static 'image/BGbtn.png' %}");
+
+  background-size: cover;
+  text-align: center;
+  font-weight:bold;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+   letter-spacing: 2px;
+  margin-top: 0%;
+  cursor: pointer;
+  border-radius: 12px;
+  border: none;
+  color: white;
+  position: absolute;
+ 
+  width: 35%;
    }
    #btn_submit_S{
-       width: 120px;
-       text-align: center;
+    padding: 10px;
+  display: inline-block;
+  background: url("{% static 'image/BGbtn.png' %}");
+
+  background-size: cover;
+  text-align: center;
+  font-weight:bold;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+   letter-spacing: 2px;
+  margin-top: 0%;
+  cursor: pointer;
+  border-radius: 12px;
+  border: none;
+  color: white;
+  position: absolute;
+ 
+  width: 35%;
    }
    #subject{
            
        text-align: center;
        background-color: white;
        border-radius: 8px;
+       display: inline-block;
+       
+       
    }
    #topic{
        
        text-align: center;
        background-color: white;
        border-radius: 8px;
+       display: inline-block;
    }
    #other{
     background-color: white;
@@ -258,7 +302,7 @@
 
                                             <label class="custom-file-label"></label>
 
-                                            <div class="container-2">
+                                            <div class="container-2" style="margin-left: 5%; margin-bottom: 5%;">
                                                 <h5>ระบบแรงดัน</h5>
                                                 <div class="radio_box" name="Voltage"></div>
                                              
@@ -271,7 +315,7 @@
 
 
                 </div>
-                <h5 style="margin-top: 5%;">ระบุรายละเอียดของอุปกรณ์ในภาพถ่าย</h5>
+                <h5 style="margin-top: 5%; margin-left: 5%;">ระบุรายละเอียดของอุปกรณ์ในภาพถ่าย</h5>
                 <div class="container-fram">
                     <style>
                         select {
@@ -279,24 +323,46 @@
                         }
                     </style>
                     
-                    <form name="myform0" method="POST" enctype="multipart/form-data">
+                    <form name="myform0" method="POST" enctype="multipart/form-data" >
                         
-                        <div id="element">
-                            <h4 style="margin-top: 2%;">อุปกรณ์ที่ 1</h4>
-                             <h5 >ประเภทอุปกรณ์</h5>
-                            <select name="subject" id="subject" style="margin-bottom:5%;" value="subject" ></select>
+                       
+                            <h4 style="margin-top: 5%; margin-left: 5%;">อุปกรณ์ที่ 1</h4>
+                             <h5 style=" margin-left: 5%;" >ประเภทอุปกรณ์</h5>  
+                             <script>
+                                     var styles = {
+                                    "background-color": "lightgray",
+                                    "width": "500px",
+                                    "height": "300px"
+                                }
+                                
+                                var obj = document.getElementById("subject");
+                                Object.assign(obj.style, styles);
+                                 </script>
+                             <div id="container"></div>
+                            
+                     <select name="subject" id="subject"  style="margin-bottom:5%; margin-left: 5%; "  value="subject" ></select>
+
+                     <br>
+
+                            <h5 style=" margin-left: 5%; "> ชนิดอุปกรณ์</h5>
+                            <select name="topic" id="topic" style="margin-bottom:5%; margin-left: 5%;" value="topict" ></select>
                             <br>
 
-                            <h5> ชนิดอุปกรณ์</h5>
-                            <select name="topic" id="topic" style="margin-bottom:5%" value="topict" ></select>
-                            <br>
+                            <h5 style=" margin-left: 5%; margin-left: 5%;"> สภาพอุปกรณ์ (เลือกได้หลายรายการ)</h5>
+                            <select multiple="multiple" class="multiple-select" value="chaptert"  name="chapter[]" id="chapter" placeholder="เลือกสภาพอุปกรณ์" ></select>
+                        <style>
+                            .multiple-select{
+                                margin-left: 5%;
+                            
+                            }
+                            #other{
+                                margin-left: 5%;
+                            }
 
-                            <h5> สภาพอุปกรณ์ (เลือกได้หลายรายการ)</h5>
-                            <select multiple="multiple" class="multiple-select" value="chaptert"  name="chapter[]" id="chapter" style="margin-bottom:5%" placeholder="เลือกสภาพอุปกรณ์" ></select>
-                        
+                            </style>
                     
-                            <div id="divother" style="margin-top: 5%;">
-                                <label for="forother">กรุณีเลือกอื่นๆ</label><br>
+                            <div id="divother" style="margin-top: 5%; margin-left: 5%;">
+                                <label for="forother" >กรุณีเลือกอื่นๆ</label><br>
                                 <input type="text" name="other" id="other" placeholder="กรุณากรอกสภาพการชำรุด" />
                             </div>
                         </div>
@@ -369,6 +435,7 @@
 
         }
     </script>
+    
 
         <script id="myscript">
             var typeData = ["115KV", "33KV", "22KV"];
@@ -613,6 +680,8 @@
                 // })
             });
             // เพิ่มกลุ่มแรงดัน,เพิ่มค่าตั้งต้น(ประเภทอุปกรณ์,ชนิดอุปกรณ์,'') ครั้งแรกเท่านั้น
+         
+            
             function addData() {
                 
                 $("#subject").append(

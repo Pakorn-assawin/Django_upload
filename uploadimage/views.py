@@ -1386,3 +1386,6 @@ def objective(request):
 
 def example(request):
     return render(request, 'example.html')
+
+def Error(request):
+    return render(request, 'Error.html')
