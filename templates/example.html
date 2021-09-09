@@ -37,6 +37,11 @@
             src: url("{% static 'CSS/NotoSansThai-ExtraCondensedBold.ttf' %}");
           
           } 
+
+          #myTopnav{
+            letter-spacing: 2px;
+
+          }
         
           h4,h3,h5{
             font-family: 'NotoSansThai';
@@ -73,14 +78,17 @@
           text-decoration: none;
           display: inline-block;
           font-size: 16px;
+          font-weight: bold;
+          letter-spacing: 2px;
           margin-top: 0%;
+          margin-bottom: 5%;
           cursor: pointer;
           border-radius: 12px;
           border: none;
           color: white;
           position: absolute;
-          margin-left: 25%;
-          width: 45%;
+          
+          width: 35%;
           
         }
         
@@ -189,13 +197,13 @@
 
                                             </div>
                                          
-                                            <div class="container-fluid " id="A" style="margin-bottom:5%;">
+                                            <div class="container-fluid " id="A" >
                                               <div class="row">
                                                 <div class="container">
-                                              <a href="/upload"> <button type="submit" class="btn-1 col-md-10 col-lg-8 col-xl-7 col-xl-9 mx-auto text-center " style="right: 0%; ">อัพโหลดรูปภาพ</button> </a>
+                                              <a href="/upload"> <button type="submit" class="btn-1 col-md-10 col-lg-8 col-xl-7 col-xl-9 mx-auto text-center " style="right: 20%; ">อัพโหลดรูปภาพ</button> </a>
                                                 </div>
                                                 <div class="container">
-                                                  <a href="/home"> <button type="submit" class="btn-1 col-md-10 col-lg-8 col-xl-7 col-xl-9 mx-auto text-center "style="left: 0%;">ย้อนกลับ</button> </a>
+                                                  <a href="/home"> <button type="submit" class="btn-1 col-md-10 col-lg-8 col-xl-7 col-xl-9 mx-auto text-center "style="left: 8%;">ย้อนกลับ</button> </a>
                                                    </div>
                                           </div>
                                       </div>

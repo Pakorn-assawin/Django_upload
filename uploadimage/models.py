@@ -8,7 +8,7 @@ class Image(models.Model):
 
     job_id = models.CharField(max_length=100, blank=True, null=True)
     job_name = models.CharField(max_length=100, blank=True, null=True)
-    job_data = models.DateField(auto_now_add=True)
+    job_date = models.DateField(auto_now_add=True)
     job_time = models.TimeField(auto_now_add=True)
     job_officerid = models.CharField(max_length=100, blank=True, null=True)
     job_picture = models.URLField(max_length=500, blank=True, null=True)
