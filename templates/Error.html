@@ -1,0 +1,223 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/complete.css' %}">
+    <title>AIDEA</title>
+    <link rel="shortcut icon" href="{% static 'image/LGAiDea.png' %}">
+    <link rel="stylesheet" href=" {% static 'css/font.css' %}">
+    <link rel="stylesheet" href=" {% static 'css/font2.css' %}">
+    <link rel="stylesheet" href=" {% static 'css/custom.css' %}">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@100;300;500;600;700&display=swap" rel="stylesheet"> -->
+
+
+</head>
+<style>
+  
+  @font-face {
+    font-family: 'NotoSansThai0';
+    src: url("{% static 'CSS/NotoSansThai-CondensedThin.ttf' %}");
+    
+  }
+
+  h1{
+    font-family: 'NotoSansThai0';
+    font-size: 14px;
+    font-weight: bold;
+  
+    word-spacing: 5px;
+    
+    /* font-size: 14px; */
+  }
+  a{
+    font-family: 'NotoSansThai0';
+    font-size: 160;
+    word-spacing: 3px;
+    
+    /* font-size: 14px; */
+  }
+  #myTopnav{
+            letter-spacing: 2px;
+
+          }
+    .btn-4 {
+        padding: 10px;
+        display: inline-block;
+        background: url("{% static 'image/BGbtn.png' %}");
+        background-size: cover;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin-top: 0%;
+        cursor: pointer;
+        border-radius: 12px;
+        border: none;
+        color: white;
+        position: absolute;
+        margin-left: 25%;
+    }
+    
+    #container-fluid-text {
+        padding: 10px;
+        display: inline-block;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin-top: 0%;
+        cursor: pointer;
+        border-radius: 12px;
+        border: none;
+        color: white;
+        position: absolute;
+    }
+
+    /* Add a black background color to the top navigation */
+.topnav {
+    background-color: #CCF4ED;
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    display: block;
+    color: #726F69;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    background-color: #CCF4ED;
+    color: black;
+  }
+  
+  /* Add an active class to highlight the current page */
+  .topnav a.active {
+    background-color: #CCF4ED;
+    color: black;
+  }
+  
+  /* Hide the link that should open and close the topnav on small screens */
+  .topnav .icon {
+    display: none;
+  }
+     /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+  @media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive a.icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+</style>
+
+<body>
+    <nav class="topnav" id="myTopnav">
+        <a class="navbar-brand" href="/home">
+            <img src="{% static 'image/LGAiDea.png' %}" alt="" width=30px;  style="margin-bottom: 5px ;" >
+
+        </a> 
+        <a href="/home" >หน้าหลัก</a>
+        <a href="/upload">อัพโหลดรูปภาพ</a>
+        <a href="/objective">วัตถุประสงค์และเงื่อนไขกิจกรรม</a>
+       
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </nav>
+
+   
+
+    <!-- Header -->
+
+    <div class="container-image-alige">
+      <img id="image" src=" {% static 'image/error.png' %}
+      " alt="Placeholder" style="display: block;  width:90%; margin-bottom: 5%; margin-right: 20%;" class="rounded mx-auto ">
+     
+      <div class="text-center">
+        <h1>ข้อผิดพลาดการเชื่อมต่อ</h1>
+        <h1>1.กรุณาโหลดหน้าเว็บซ้ำ</h1>
+        <h1>2.กรุณาตรวจสอบการเชื่อมต่ออินเตอร์เน็ต</h1>
+        <h1>3.กรุณาติดต่อผู้ดูแลเว็บไซต์  <a href="https://line.me/ti/g2/wFtHkLQ3HbfSft7M4YiKlw?utm_source=invitation&utm_medium=link_copy&utm_campaign=default" class="visited-link">คลิ๊ก</a> </h1>
+
+   
+      </div>
+  </div>
+
+    <div class="container-fluid">
+
+        <div class="col-md-10 col-lg-8 col-xl-7 " style="margin-top:5%; margin-bottom: 10%;">
+
+            <a href="/upload"> <button type="submit" class="btn-4 col-md-10 col-lg-8 col-xl-7 col-xl-9 mx-auto  " style="left: 25%; margin-top: 5%;">อัพโหลดรูปภาพใหม่</button> </a>
+
+        </div>
+
+        
+    </div>
+
+    <div class="container-fluid-text" style="margin-top: 25% ;">
+       
+
+        <div class="col-md-10 col-lg-8 col-xl-7 " style="margin-top:5%; margin-bottom: 10%;">
+
+          <h5 class="text-center" style="color: white;">ลงไว้เว้นบันทัด</h5>
+      </div>
+
+
+      <div class="col-md-10 col-lg-8 col-xl-7 ">
+        <a href="/home" class="card-link">
+            <h5 class="text-center" style="color: gray;">กลับสู่หน้าหลัก</h5>
+        </a>
+    </div>
+    </div>
+
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script>
+     
+        /* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+      </script>
+</body>
+
+</html>
