@@ -122,6 +122,30 @@
   position: absolute;
   width: 35%;
    }
+
+   .btn-1{
+    padding: 10px;
+  display: inline-block;
+  background: url("{% static 'image/BGbtn.png' %}");
+
+  background-size: cover;
+  text-align: center;
+  font-weight:bold;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  cursor: pointer;
+  border-radius: 12px;
+  border: none;
+  color: white;
+  position: absolute;
+  width: 40%;
+  
+}
    #subject{
            
        text-align: center;
@@ -286,7 +310,7 @@
                                         <div class="container-fluid-1">
 
                                             <div class="container-image-alige">
-                                                <img id="image" src="\static\image\12.png" alt="Your Image" style="width:50%; "  class="rounded mx-auto d-block">
+                                                <img id="image" src="\static\image\12.png" alt="Your Image" style="width:50%; margin-top: 10%; margin-left: 25%; "  >
                                                 <h5 id="jpg-png">.jpeg ,.png (ขนาดไฟล์ 4 MB)</h5>
                                             </div>
 
@@ -325,7 +349,7 @@
                     <form name="myform0" method="POST" enctype="multipart/form-data" >
                         
                         <div id="element">
-                            <h4 style="margin-top: 5%; margin-left: 5%;">อุปกรณ์ที่ 1</h4>
+                            <h4 style="margin-top: 0%; margin-left: 5%;">อุปกรณ์ที่ 1</h4>
                              <h5 style=" margin-left: 5%;" >ประเภทอุปกรณ์</h5>  
                              <script>
                                      var styles = {
@@ -373,25 +397,30 @@
                          <br>เพิ่มอุปกรณ์<br>
                          <input id="buttadd" type="button" value="+เพิ่มอุปกรณ์" />
                     </div> -->
-                    <div class="container" style="margin-top: 10%; margin-bottom: 5%;">
-                        <div class="row">
-                          <div class="col">
-                            <a href="/home">  <input id="btn_submit_B" type="link"  value="ย้อนกลับ" > </a>
+                    
+                      
 
-                          </div>
-                          <div class="col">
-                            <a href="/complete">   <input id="btn_submit_S" type="submit"  value="ส่งข้อมูล"> </a>
+                      <!-- <div class="col">
+                        <a href="/complete">   <input id="btn_submit_S" type="submit"  value="ส่งข้อมูล"> </a>
 
-                          </div>
-                          
-                        </div>
-                      </div>
-                </div>
-                <div class="col-xl-9 mx-auto" style="height: 150px;">
-                </div>
+                      </div> -->
+
+                
             </div>
             </div>
             </form>
+            <div class="container-fluid " id="A" style="margin-bottom: 2%; margin-top: 2%;">
+                <div class="row">
+                  <div class="container">
+                    <a href="/upload"> <button type="submit" value="ส่งข้อมูล"   class="btn-1 col-sm-6 col-md-10 col-lg-8 col-xl-7 col-xl-9 mx-auto text-center " style="right: 5%; ">อัพโหลดรูปภาพ</button> </a>
+                  </div>
+                  <div class="container">
+                    <a href="/complete"> <button type="button"  class="btn-1  col-sm-6 col-md-10 col-lg-8 col-xl-7 col-xl-9 mx-auto text-center "style="left: 5%;">ย้อนกลับ</button> </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-9 mx-auto" style="height: 90px;">
+            </div>
         </form>
     </form>
      <!-- #เช็คเลือกแรงดัน อุปกรณ์ ชนิด สาเหตุ บังคับเลือก -->
